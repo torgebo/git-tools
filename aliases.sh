@@ -7,6 +7,6 @@ alias gmnotest='git commit -v --no-verify'
 alias gd='git diff --submodule=diff'
 alias gl='git log'
 alias gg='git grep --recurse-submodules'
-alias gb='git branch'
+alias gb='git branch --color -r -vv'
 
 alias gresmas='git reset --soft $(git merge-base master HEAD)'
