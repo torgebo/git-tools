@@ -8,7 +8,7 @@ alias gd='git diff --submodule=diff'
 alias gl='git log'
 alias gg='git grep --recurse-submodules'
 alias gb='git branch --color -r -vv --sort=-committerdate'
-alias gbb="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias gbb="git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always | column -ts'|'"
 
 
 alias gresmas='git reset --soft $(git merge-base master HEAD)'
