@@ -73,9 +73,10 @@ def get_current_branch():
 
 
 def prompt():
+    """Prompt user at command line about branch creation."""
     happy = False
     while not happy:
-        branch_name = input("please enter branch name : ")
+        branch_name = input("\u001b[35m" + "please enter branch name : ")
         response_happy: str = 'o'
         cur_branch = get_current_branch()
         while response_happy not in ('y', 'n'):
